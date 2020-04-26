@@ -21,8 +21,8 @@ $mail = new PHPMailer;
 $mail->isSMTP();  // Set mailer to use SMTP
 $mail->Host = 'smtp.mailgun.org';  // Specify mailgun SMTP servers
 $mail->SMTPAuth = true; // Enable SMTP authentication
-$mail->Username = 'postmaster@sandboxea3c5b5ed70348fd8675bf56435c2e64.mailgun.org'; // SMTP username from https://mailgun.com/cp/domains
-$mail->Password = '3ef5594796ebd5410ba605e015264b54-9dfbeecd-441183d8'; // SMTP password from https://mailgun.com/cp/domains
+$mail->Username = ''; // SMTP username from https://mailgun.com/cp/domains
+$mail->Password = ''; // SMTP password from https://mailgun.com/cp/domains
 $mail->SMTPSecure = 'tls';   // Enable encryption, 'ssl'
 $mail->From = 'majornwa189@gmail.com'; // The FROM field, the address sending the email 
 $mail->FromName = 'Prince Lee'; // The NAME field which will be displayed on arrival by the email client
