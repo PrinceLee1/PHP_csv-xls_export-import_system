@@ -2,7 +2,7 @@
 <?php
 $success = "";
 $error_message = "";
-$conn = new mysqli("localhost","newuser","password","spSystem");
+    $conn = new mysqli("localhost","dbusername","****","dbname") ;
 if($conn){
     if(isset($_POST["submit_email"])) {
         $result = mysqli_query($conn,"SELECT * FROM registered_users WHERE email='" . $_POST["email"] . "'");
@@ -50,9 +50,8 @@ $date = date('Y-m-d H:i:s');
         } else {
        echo   '  $error_message = "Email not exists!"';
         }
-    }else{
-        echo 'E no work';
     }
+	
 }else{
     echo 'Couldnt connect';
 }
