@@ -1,5 +1,5 @@
 <?php
-$conn = new mysqli("localhost","newuser","password","spSystem");
+    $conn = new mysqli("localhost","dbusername","****","dbname") ;
 
 
 if($conn)
