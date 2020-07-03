@@ -26,7 +26,7 @@ require_once 'index.php';
 
 $try = $_SESSION['user_first_name']. '--'.$_SESSION['user_last_name'];
 // echo $try;exit;
-    $con = new mysqli("localhost","newuser","password","spSystem") ;
+    $con = new mysqli("localhost","dbusername","****","dbname") ;
     if($con){
     $Sql = "SELECT * FROM mydata WHERE user_id ='$try'";
     $result = mysqli_query($con, $Sql); 
@@ -103,7 +103,7 @@ $try = $_SESSION['user_first_name']. '--'.$_SESSION['user_last_name'];
             if(isset($_POST['create_pdf'])){
                 require_once 'fpdf.php';
                 $pdf = new FPDF();
-                $con = new mysqli("localhost","newuser","password","spSystem") ;
+    $con = new mysqli("localhost","dbusername","****","dbname") ;
                 $result = mysqli_query($con, "SELECT Cars,chairs,phone,game FROM mydata WHERE user_id='$try'");
                 if($result){
 $header =mysqli_query($con,"SELECT UCASE(`COLUMN_NAME`) 
